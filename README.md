@@ -4,7 +4,7 @@
 
 - 1º deixar o Script na mesma pasta do arquivo que deseja cifrar/decifrar
 - 2º Executar o cmd do Windows
-- 3º Navegar o cmd com o comando cd até a pasta que se encontra o os arquivos
+- 3º Navegar os diretorios pelo cmd com o comando cd até a pasta que se encontra os arquivos
 - 4º Executar o comando de execução do script exemplo mais abaixo
 - 5º ver o resultado
 
