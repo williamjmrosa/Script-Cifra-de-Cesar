@@ -46,11 +46,17 @@ ou frase que servira para calcular o deslocamento para cifrar e decifrar o arqui
 <br>
  o atributo "<b>tipo</b>" recebe a palavra cifrar ou decifrar.
 <br>
-Depois temos a função deslocamento() responsavel por calcular o deslocamento,
-<br> usando o atributo "<b>senha</b>" a função deslocamento() primeiro faz um if para verificar
+Depois temos a função <b>deslocamento()</b> responsavel por calcular o deslocamento,
+<br> usando o atributo "<b>senha</b>" a função "<b>deslocamento</b>" primeiro faz um if para verificar
 <br> se atributo "<b>senha</b>" e uma string se for uma string tem um for para passar por cada
-<br> caracter dessa string e ver qual o valor dele na tabela ASCII tendo esse valor ele é somado<br>
-num atributo chamado "<b>numero</b>" que foi inicializado em 0 antes do for uma vez passado pelo for
+<br> caracter dessa string e ver qual o valor dele na tabela ASCII tendo esse valor ele é somado
+<br> num atributo chamado "<b>numero</b>" que foi inicializado em 0 antes do for uma vez passado pelo for
 <br> o atributo "<b>senha</b>" recebe o atributo numero "<b>numero</b>" e depois disso possui outro if
-que é responsavel para descobrir qual é deslocamento que a senha tem dentro em relação ao atributo "<b>tamanho</b>"
+<br> que é responsavel para descobrir qual é deslocamento que a senha tem dentro em relação ao atributo "<b>tamanho</b>"
 <br>como uma função recursiva.
+Depois a função <b>cifrar(caracter,desloca)</b> essa função recebe um "<b>caracter</b> do arquivo de texto,
+<br> e o "<b>desloca</b>" que é a "<b>senha</b>" após calcular o deslocamento com essas informações 
+<br> é e visto o equivalente a letra passada e retornada a nova e se não existir a a letra no atributo
+<br>"<b>caracteres</b>" ele retorna a propria letra.
+A proxima é a função "<b>decifrar(caracter,desloca)</b>" ela faz o mesmo que a função cifrar, mas quando
+<br>faz o deslocamento em vez de soma sobtrair o deslocamento
