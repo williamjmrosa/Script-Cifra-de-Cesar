@@ -68,6 +68,8 @@ def ler():
 			for letra in arquivo.read():
 				cifra += decifrar(letra,senha)
 			criarArquivo("decifrar-"+nomeArquivo,cifra)
+		else:
+			print("Entra do que fazer errada")
 		arquivo.close()
 	except FileNotFoundError:
 		print("Arquivo não existe")
