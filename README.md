@@ -46,17 +46,30 @@ ou frase que servira para calcular o deslocamento para cifrar e decifrar o arqui
 <br>
  o atributo "<b>tipo</b>" recebe a palavra cifrar ou decifrar.
 <br>
-Depois temos a função <b>deslocamento()</b> responsavel por calcular o deslocamento,
+<br>Depois temos a função <b>deslocamento()</b> responsavel por calcular o deslocamento,
 <br> usando o atributo "<b>senha</b>" a função "<b>deslocamento</b>" primeiro faz um if para verificar
 <br> se atributo "<b>senha</b>" e uma string se for uma string tem um for para passar por cada
 <br> caracter dessa string e ver qual o valor dele na tabela ASCII tendo esse valor ele é somado
 <br> num atributo chamado "<b>numero</b>" que foi inicializado em 0 antes do for uma vez passado pelo for
 <br> o atributo "<b>senha</b>" recebe o atributo numero "<b>numero</b>" e depois disso possui outro if
-<br> que é responsavel para descobrir qual é deslocamento que a senha tem dentro em relação ao atributo "<b>tamanho</b>"
-<br>como uma função recursiva.
-Depois a função <b>cifrar(caracter,desloca)</b> essa função recebe um "<b>caracter</b> do arquivo de texto,
+<br> que é responsavel para descobrir qual é deslocamento que a senha tem dentro em relação ao<br>
+atributo "<b>tamanho</b>" como uma função recursiva.
+<br><br>Depois a função <b>cifrar(caracter,desloca)</b> essa função recebe um "<b>caracter</b> do arquivo de texto,
 <br> e o "<b>desloca</b>" que é a "<b>senha</b>" após calcular o deslocamento com essas informações 
 <br> é e visto o equivalente a letra passada e retornada a nova e se não existir a a letra no atributo
 <br>"<b>caracteres</b>" ele retorna a propria letra.
-A proxima é a função "<b>decifrar(caracter,desloca)</b>" ela faz o mesmo que a função cifrar, mas quando
+<br><br>A proxima é a função "<b>decifrar(caracter,desloca)</b>" ela faz o mesmo que a função cifrar, mas quando
 <br>faz o deslocamento em vez de soma sobtrair o deslocamento
+<br><br>A função "<b>criarArquivo(nome,texto_cifrado)</b>" tem o atributo "<b>nome</b>" que é o nome do
+<br>arquivo a ser criado e o atributo <b>texto_cifrado</b> que é o texto que foi cifrado ou decifrado,
+<br>para ser salvo no arquivo.
+<br><br>A função "<b>ler()</b>" é responsavel por pegar os atributos inseridos via linha de comando quando
+<br>o script foi executado e começar a trabalhar com eles primeiro chamando a função "<b>deslocamento()</b>"
+<br> pra calcular o deslocamento do atributo "<b>senha</b>",depois abrir o arquivo usando o 
+<br>atributo "<b>locaArquivo</b>" sendo verificado se arquivo existe senão existir volta 
+<br>mensagem de "<b>Arquivo não existe</b>" e o script encerra a execução,
+<br>caso exista é feito um if para verificar se é para cifrar se for tem um for
+<br> que lê o arquivo caracter a caracter e passa passa para função cifrar que retorna o caracter
+<br> cifrado e passa um atributo chamado "<b>cifra</b>" o elif faz a mesma coisa que o if só que
+<br> verificado para decifrar e o else é causa não tenha a entra da certa
+<br> retorna a mensagem "<b>Entrado do que fazer errada</b>" e termina a exucução do script.
