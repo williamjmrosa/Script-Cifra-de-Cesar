@@ -8,7 +8,6 @@
 - 4º Executar o comando de execução do script exemplo mais abaixo
 - 5º ver o resultado
 
-
 ### Legenda
 
 - <script\> nome do arquivo "nome do script.py" 
@@ -27,49 +26,60 @@ EX: python "Script Cifra de César.py" texto.txt "codifica" decifrar
 ### Funcionamento 
 
 O Codigo do Script Cifra de César tem 5 funções para funcionar corretamente 
-<br>
-e um if else para vefiricar a falta de entradas.
-<br>
-No inicio do codigo em um atributo chamado "<b>caracteres</b>" ele é uma string que
-<br>
-tem quase todos os caracteres visiveis da tabela ASCII que também é um dos 
-<br>
-diferenciais da cifra césar padrão onde só tem o alfabeto de a-z.
-<br>
-o codigo também tem 4 outros atributos esses atributos são eles "<b>tamanho</b>" que 
-<br>
-receber o tamanho da string de "<b>caracteres</b>", o atributo "<b>localArquivo</b>" 
-<br>
-recebe o nome do arquivo de texto, o atributo "<b>senha</b>" recebe uma palavra 
-<br>
-ou frase que servira para calcular o deslocamento para cifrar e decifrar o arquivo,
-<br>
- o atributo "<b>tipo</b>" recebe a palavra cifrar ou decifrar.
-<br>
-<br>Depois temos a função <b>deslocamento()</b> responsavel por calcular o deslocamento,
-<br> usando o atributo "<b>senha</b>" a função "<b>deslocamento</b>" primeiro faz um if para verificar
-<br> se atributo "<b>senha</b>" e uma string se for uma string tem um for para passar por cada
-<br> caracter dessa string e ver qual o valor dele na tabela ASCII tendo esse valor ele é somado
-<br> num atributo chamado "<b>numero</b>" que foi inicializado em 0 antes do for uma vez passado pelo for
-<br> o atributo "<b>senha</b>" recebe o atributo numero "<b>numero</b>" e depois disso possui outro if
-<br> que é responsavel para descobrir qual é deslocamento que a senha tem dentro em relação ao<br>
-atributo "<b>tamanho</b>" como uma função recursiva.
-<br><br>Depois a função <b>cifrar(caracter,desloca)</b> essa função recebe um "<b>caracter</b> do arquivo de texto,
-<br> e o "<b>desloca</b>" que é a "<b>senha</b>" após calcular o deslocamento com essas informações 
-<br> é e visto o equivalente a letra passada e retornada a nova e se não existir a a letra no atributo
-<br>"<b>caracteres</b>" ele retorna a propria letra.
-<br><br>A proxima é a função "<b>decifrar(caracter,desloca)</b>" ela faz o mesmo que a função cifrar, mas quando
-<br>faz o deslocamento em vez de soma sobtrair o deslocamento
-<br><br>A função "<b>criarArquivo(nome,texto_cifrado)</b>" tem o atributo "<b>nome</b>" que é o nome do
-<br>arquivo a ser criado e o atributo <b>texto_cifrado</b> que é o texto que foi cifrado ou decifrado,
-<br>para ser salvo no arquivo.
-<br><br>A função "<b>ler()</b>" é responsavel por pegar os atributos inseridos via linha de comando quando
-<br>o script foi executado e começar a trabalhar com eles primeiro chamando a função "<b>deslocamento()</b>"
-<br> pra calcular o deslocamento do atributo "<b>senha</b>",depois abrir o arquivo usando o 
-<br>atributo "<b>locaArquivo</b>" sendo verificado se arquivo existe senão existir volta 
-<br>mensagem de "<b>Arquivo não existe</b>" e o script encerra a execução,
-<br>caso exista é feito um if para verificar se é para cifrar se for tem um for
-<br> que lê o arquivo caracter a caracter e passa passa para função cifrar que retorna o caracter
-<br> cifrado e passa um atributo chamado "<b>cifra</b>" o elif faz a mesma coisa que o if só que
-<br> verificado para decifrar e o else é causa não tenha a entra da certa
-<br> retorna a mensagem "<b>Entrado do que fazer errada</b>" e termina a exucução do script.
+<br> e 5 atributos globais.
+<br> 
+### Atributos globais
+![Atributo caracteres](https://user-images.githubusercontent.com/24362264/206929595-20827bb3-dd02-46f7-a089-17351270f65f.PNG)
+
+Na imagem acima está representada a string que contem todos os caracters que podem ser cifrados
+<br>que este atributo é um diferencial da cifra de Cesar padrão que possui o alfabeto.
+
+![Atributo entrada](https://user-images.githubusercontent.com/24362264/206929643-43454251-4901-46ba-80cb-c2ebfe6d3e2b.PNG)
+
+Na imagem acima está representado 4 atributos que represtando o tamanho da string de caracteres, 
+<br>localArquivo que vai ser cifrado/decifrado, senha do arquivo que serve para calcular o deslocamento,
+<br>tipo para dizer se o arquivo vai ser cifrado ou decifrado.
+<br>Esse atributos estão dentro de um if que serve para ver se o numero de entradas é o necessario para
+<br>executar o script e recebe os valores e chama a função ler() e se não tiver as entradas mostra mensagem de erro.
+
+### Função deslocamento
+
+![Função Deslocamento](https://user-images.githubusercontent.com/24362264/206931084-3da30b03-d20a-48b3-9445-8506b2be50f1.PNG)
+
+Na imagem acima está a função deslocamento() que outro diferencial ela pega o atributo global senha e no primeiro if descobre o,
+<br>equivalente numerico para deslocamento que é feito convertendo cada caracter da senha no codigo da
+<br>tabela ASCII e somando ao atributo local numero inicializado em zero depois passa esse atributo de 
+<br>devolta pra senha no segundo if usando recursividade pra calcular a equivalencia da senha do deslocamento
+<br>da string de caracteres e atualiza o atributo global senha com o deslocamento equivalente.
+
+### Função cifrar
+
+![Função cifrar](https://user-images.githubusercontent.com/24362264/206931798-acae1269-4702-4348-97f3-434da31258b3.PNG)
+
+Na imagem acima temos a função cifrar que recebe por parametro um unico caracter para ser cifrado e o deslocamento
+<br>para calcular o caracter cifrado e retornar ele e se o caracter não existir no atributo caracteres ele não sera cifrado e retorna
+<br> ele mesmo.
+
+### Função decifrar
+
+![Função decifrar](https://user-images.githubusercontent.com/24362264/206932087-bcf678b4-983e-4227-813e-0dd89aa6937c.PNG)
+
+Na imagem acima temos a função decifrar que recebe o caracter para decifrar e o deslocamento para decifrar o caracter e
+<br> retonar ele e se o caracter não existir ele não é decifrado e retorna ele mesmo.
+
+### Função criarArquivo
+
+![Função criarArquivo](https://user-images.githubusercontent.com/24362264/206932407-0cb20aa0-bfb5-459d-b66f-2802e147b0fd.PNG)
+
+Na imagem acima temos a função de criar um arquivo novo depois de cifrar ou decifrar o arquivo lido.
+
+### Função ler
+
+![Função ler](https://user-images.githubusercontent.com/24362264/206932474-9355d493-f5b9-4681-94e0-2531654efc20.PNG)
+
+Na imagem acima temos a função ler que é responsavel por abrir o arquivo que vai ser cifrado/decifrado e atraves de
+<br> um try verificar se o arquivo foi aberto e se não for disparar um erro. Também inicia a função que calcula o
+<br>deslocamento e depois faz o if elif else pra ver se vai cifra ou decifrar e mensagem se entrada for invalida dentro
+<br> dentro do if elif é feito um for para ler o arquivo caracter por caracter e passar cada caracter pela função
+<br>cifra/decifrar dependendo de onde entrou e retornar o caracter cifrado/decifrado para o atributo local cifra
+<br>uma vez lido todo o arquivo ele é salvo num novo arquivo com a função criar arquivo.
