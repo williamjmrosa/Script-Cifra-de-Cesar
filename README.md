@@ -8,6 +8,7 @@
 - 4º Executar o comando de execução do script exemplo mais abaixo
 - 5º ver o resultado
 <br>OBS: arquivo para ler não pode ter "-" com exeção do que serve para separar o cifra/decifra do nome do arquivo original
+e arquivos devem estar em formato UTF-8
 <br>EX:cifrar-livroxxx.txt
 ### Legenda
 
@@ -70,13 +71,13 @@ Na imagem acima temos a função decifrar que recebe o caracter para decifrar e 
 
 ### Função criarArquivo
 
-![Função criarArquivo](https://user-images.githubusercontent.com/24362264/206932407-0cb20aa0-bfb5-459d-b66f-2802e147b0fd.PNG)
+![Função criarArquivo](https://user-images.githubusercontent.com/24362264/206935598-8c1ef134-9be8-4a5c-88a9-2802e9737c0b.PNG)
 
 Na imagem acima temos a função de criar um arquivo novo depois de cifrar ou decifrar o arquivo lido.
 
 ### Função ler
 
-![Função ler](https://user-images.githubusercontent.com/24362264/206932474-9355d493-f5b9-4681-94e0-2531654efc20.PNG)
+![Função ler](https://user-images.githubusercontent.com/24362264/206935607-de690377-1962-427b-99bf-18a94f813eae.PNG)
 
 Na imagem acima temos a função ler que é responsavel por abrir o arquivo que vai ser cifrado/decifrado e atraves de
 <br> um try verificar se o arquivo foi aberto e se não for disparar um erro. Também inicia a função que calcula o
