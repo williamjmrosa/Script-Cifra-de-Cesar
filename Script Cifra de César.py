@@ -45,7 +45,7 @@ def decifrar(caracter,desloca):
 
 #cria arquivo
 def criarArquivo(nome,texto_cifrado):
-	novoArquivo = open(nome,"w")
+	novoArquivo = open(nome,"w",encoding="utf8")
 
 	novoArquivo.write(texto_cifrado)
 	novoArquivo.close()
@@ -55,7 +55,7 @@ def ler():
 		deslocamento()
 		
 		cifra = ""
-		arquivo = open(localArquivo,"r") 
+		arquivo = open(localArquivo,"r",encoding="utf8") 
 		nomeArquivo = localArquivo.split("-")
 		nomeArquivo = nomeArquivo[len(nomeArquivo) - 1]
 		if tipo == "cifrar":	
