@@ -7,7 +7,8 @@
 - 3º Navegar os diretorios pelo cmd com o comando cd até a pasta que se encontra os arquivos
 - 4º Executar o comando de execução do script exemplo mais abaixo
 - 5º ver o resultado
-
+<br>OBS: arquivo para ler não pode ter "-" com exeção do que serve para separar o cifra/decifra do nome do arquivo original
+<br>EX:cifrar-livroxxx.txt
 ### Legenda
 
 - <script\> nome do arquivo "nome do script.py" 
